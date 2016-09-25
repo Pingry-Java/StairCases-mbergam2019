@@ -6,7 +6,7 @@ import java.util.Scanner; //Import scanner to get user input
  * @author Miro Bergam
  */
 
-public class StairCases
+public class StairCases //same name as doc
 {	
   /**
    * Main method demonstrates the other two methods by calling each of them.
@@ -28,13 +28,15 @@ public class StairCases
    */
   public static void printAscending(int size)
   {
-  	for (int height = 0; height < size; height++) //measures the rows
+  	for (int height = 0; height < size; height++) //measures the rows by counting up from
+  	//0 and ending the loop when it hits the user's inputted size 
+  	
   	{
 		for (int length = 0; length < height + 1; length++)//measures the columns 
 		{
 			System.out.print("x ");
 		}
-		System.out.println();
+		System.out.println(); //new line char
 	}
   }
   /**
@@ -43,16 +45,17 @@ public class StairCases
    */
   public static void printDescending(int size)
   {
-  	for (int height = size; height > 0; height = height- 1) //measures the rows
+  	for (int height = size; height > 0; height = height- 1) //measures the rows by counting
+  	//down from the user's inputted size and ending the loop when it hits 0
 	{
 		for (int length = height; length > 0; length = length - 1) //measures the columns
 		{
 			System.out.print("x "); 
 		}
-		System.out.println();
+		System.out.println(); //new line char
 	}
   }
 
 
 
-}
+} //close public class
