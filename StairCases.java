@@ -16,8 +16,8 @@ public class StairCases //same name as doc
   public static void main(String[] args)
   {
     Scanner keys = new Scanner(System.in); //establishes scanner
-	System.out.println("What size do you want your staircases to be?");
-	int size = keys.nextInt();  //saves the player's size in the variable "size"
+    System.out.println("What size do you want your staircases to be?");
+    int size = keys.nextInt();  //saves the player's size in the variable "size"
 
     printAscending(size); //calls the ascending staircase method
     printDescending(size);//calls the descending staircase method
