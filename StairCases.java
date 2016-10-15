@@ -1,8 +1,8 @@
 import java.util.Scanner; //Import scanner to get user input
 
 /**
- * This class creates two staircases (ascending and descending) based on user input
- * @version 0.1
+ * This class creates two staircases (ascending and descending) based on user input recursively
+ * @version 1.0
  * @author Miro Bergam
  */
 
@@ -28,13 +28,13 @@ public class StairCases //same name as doc
    */
 	public static void printAscending(int size)
 	{
-  		for (int height = 0; height < size; height++) //measures the rows by counting up from
-  	//0 and ending the loop when it hits the user's inputted size 
-  		{
-			for (int length = 0; length < height + 1; length++)//measures the columns 
-				System.out.print("x ");
-			System.out.println(); //new line char
+		if (size > 0)
+			printAscending(size-1);
+		for (int n = 0; n < size; n++)
+		{
+			System.out.print("X");
 		}
+		System.out.println();
 	}
   /**
    * Method prints a ascending staircase
@@ -42,13 +42,13 @@ public class StairCases //same name as doc
    */
 	public static void printDescending(int size)
 	{
-		for (int height = size; height > 0; height = height- 1) //measures the rows by counting
-  	//down from the user's inputted size and ending the loop when it hits 0
-  		{
-			for (int length = height; length > 0; length = length - 1) //measures the columns
-				System.out.print("x "); 
-			System.out.println(); //new line char
+		for (int n = 0; n < size; n++)
+		{
+			System.out.print("X");
 		}
+		System.out.println();
+		if (size > 0)
+			printDescending(size-1);
 	}
 
 
